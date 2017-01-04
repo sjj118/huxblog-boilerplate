@@ -1,11 +1,11 @@
 # Site settings
-title: sjj118
-SEOTitle: blog
+title: "sjj118 Blog"
+SEOTitle: "史记的博客 | sjj118 Blog"
 header-img: img/home-bg.jpg
-email: sjj118@sjj118
+email: "sjj118@sjj118.com"
 description: ""
 keyword: ""
-url: "http://blog.sjj118.com”              # your host, for absolute URL
+url: "http://blog.sjj118.com"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -68,8 +68,8 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，看看产品。世界那么大，多玩玩看看。"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "记录历史，让历史记住。"
+sidebar-avatar: /img/avatar-sjj118.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
