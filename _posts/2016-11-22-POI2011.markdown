@@ -4,8 +4,8 @@ title: "POI2011"
 author: "sjj118"
 date: 2016-11-22
 tags:
-	- 练习记录
-	- POI
+    - 练习记录
+    - POI
 ---
 
 NOIP被智商碾压，感觉自己学数据结构学傻了，于是决定刷一波POI涨智商。
