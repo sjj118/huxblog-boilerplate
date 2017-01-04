@@ -15,8 +15,8 @@ RSS: false
 #weibo_username:     sjj118
 zhihu_username:     sjj118
 github_username:    sjj118
-#twitter_username:  huxpro
-#facebook_username:  huxpro
+#twitter_username:  sjj118
+#facebook_username:  sjj118
 
 
 
@@ -62,7 +62,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_domain: blog.sjj118.com
 
 
 
