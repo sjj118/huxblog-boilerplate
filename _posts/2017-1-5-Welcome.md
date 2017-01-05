@@ -4,9 +4,10 @@ title: Welcome
 subtitle: a new start
 date: 2017-1-5
 author: sjj118
+header-img: "img/post-bg-welcome.jpg"
 ---
 
-欢迎来到我的新博客。
+### 欢迎来到我的新博客。
 
 本博客采用 Jekyll + Github Pages，主题是从[hux](https://github.com/Huxpro/huxpro.github.io)那里fork来的。本博客的使用方式是在本地用markdown写作，然后git push一下即可。
 
