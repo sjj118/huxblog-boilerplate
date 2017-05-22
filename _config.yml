@@ -1,6 +1,6 @@
 # Site settings
 title: "sjj118 Blog"
-SEOTitle: "史记的博客 | sjj118 Blog"
+SEOTitle: "史记的博客 | sjj118's Blog"
 header-img: img/home-bg.jpg
 email: "sjj118@sjj118.com"
 description: ""
@@ -84,5 +84,9 @@ friends: [
     {
         title: "HXLLL",
         href: "http://rackcent.win/"
+    }
+    {
+        title: "M_E"
+        href: "https://mecyz.tech/"
     }
 ]
