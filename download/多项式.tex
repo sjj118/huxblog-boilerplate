@@ -1,0 +1,67 @@
+\documentclass{beamer}
+\usepackage[UTF8,noindent]{ctexcap}
+\usetheme{Copenhagen}
+\begin{document}
+\title{多项式简介}
+\author{史记}
+\date{\today}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{系数表示法}
+定义n次多项式为$A(x)=\sum_{i=0}^{n}a_ix^i=a_0+a_1x+a_2x^2+...+a_nx^n$\\
+a是这个多项式的系数数组\\
+最常用的表示多项式的方法就是用系数数组表示\\
+\end{frame}
+
+\begin{frame}{多项式的基本运算}
+令A和B为两个n次多项式\\
+加减：$(A\pm B)(x)=A(x)\pm B(x)=\sum_{i=0}^{n}(a_{i}\pm b_{i})x^{i}$\\
+乘法：$(A\times B)(x)=\sum_{i=0}^{n}\sum_{j=0}^{n}a_{i}b_{j}x^{i+j}$
+\end{frame}
+
+\begin{frame}{多项式的点值表示法}
+\begin{block}{定理}
+已知平面上n个横坐标不同的点，则有且仅有1个n-1次多项式经过这n个点。
+\end{block}
+\pause
+于是就有了另一种表示多项式的方法：用多项式曲线上n-1个点的坐标表示
+\end{frame}
+
+\begin{frame}{点值表示法与系数表示法的转换}
+\begin{itemize}
+\item 系数表示法->点值表示法：\\
+随便取n+1个不同的数作为横坐标代进去\\
+\pause
+\item 点值表示法->系数表示法：\\
+称为插值\\
+常用算法是拉格朗日插值法，后面会介绍\\
+\end{itemize}
+\end{frame}
+
+\begin{frame}{点值表示法下的基本运算}
+设插值所用的横坐标为$x_0,x_1,...x_n$\\
+L表示插值函数\\
+$A(x)=L(A(x_0),A(x_1),...,A(x_n)),B(x)=L(B(x_0),B(x_1),...,B(x_n))$\\
+\pause
+加减：$(A\pm B)(x)=L((A\pm B)(x_0),(A\pm B)(x_1),...,(A\pm B)(x_n))=L(A(x_0)\pm B(x_0),A(x_1)\pm B(x_1),...,A(x_n)\pm B(x_n))$\\
+\pause
+乘法：$(A\times B)(x)=L((A\times B)(x_0),(A\times B)(x_1),...(A\times B)(x_n))=L(A(x_0)\times B(x_0),A(x_1)\times B(x_1),...,A(x_n)\times B(x_n))$
+\end{frame}
+
+\begin{frame}{快速傅立叶变换}
+FFT可以在$O(nlogn)$的时间复杂度内从特定的n个横坐标上插值出多项式\\
+准确的说是$\omega_n^1,\omega_n^2,...\omega_n^n$\\
+$\omega_n$是复数，表示n次单位根\\
+FFT的过程这里不深入探究\\
+如果要计算两个系数表示的多项式的乘积的系数表示，就可以先转换成点值表示，然后相乘，再插值回去
+\end{frame}
+
+\begin{frame}{拉格朗日插值}
+FFT只能从特定的横坐标插值，如果想要从任意点插值，就要使用拉格朗日插值法了\\
+
+\end{frame}
+
+\end{document}
