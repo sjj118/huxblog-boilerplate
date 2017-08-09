@@ -61,7 +61,35 @@ FFT的过程这里不深入探究\\
 
 \begin{frame}{拉格朗日插值}
 FFT只能从特定的横坐标插值，如果想要从任意点插值，就要使用拉格朗日插值法了\\
+\pause
+设已知n+1个点为$(x_0,y_0),(x_1,y_1),...,(x_n,y_n)$\\
+假设我们找到了n+1个函数$c_i(x)$满足$c_i(x)=\left\{
+\begin{array}{ll}
+
+1&\text{$x=x_i$}\\
+
+0&\text{$x=x_j,i\neq j$}
+
+\end{array}\right.
+$\\
+\pause
+那么插值出的函数可以表示成$$F(x)=\sum_{i=0}^{n}c_i(x)y_i=c_0(x)y_0+c_1(x)y_1+...+c_n(x)y_n$$\\
+\pause
+$$c_i(x)=\frac{\prod_{j\neq i}(x-x_j)}{\prod_{j\neq i}(x_i-x_j)}$$
 
 \end{frame}
+
+\begin{frame}{例题：如何优雅地求和}
+有一个多项式函数$f(x)$，最高次幂为$x^m$，定义变换$Q$：
+$$Q(f,n,x)=\sum_{k=0}^{n}f(k)\binom{n}{k}x^k(1-x)^{n-k}$$
+现在给定函数 f 和数字 n, x，求 Q(f,n,x) mod 998244353\\
+$n\leqslant 10^9,m\leqslant 2*10^4$\\
+tip: 可以发现Q(f)是关于n的m次函数\\
+\pause
+先求出Q(f,0,x),Q(f,1,x),...,Q(f,m,x)\\
+然后插值即可求出Q(f,n,x)\\
+$O(m^2)$卡卡常就能过了\\
+\end{frame}
+
 
 \end{document}
