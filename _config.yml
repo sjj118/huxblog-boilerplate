@@ -88,5 +88,9 @@ friends: [
     {
         title: "M_E",
         href: "https://mecyz.tech/"
+    },
+    {
+        title: "WA自动机",
+        href: "https://waautomaton.github.io/"
     }
 ]
