@@ -82,11 +82,12 @@ $$c_i(x)=\frac{\prod_{j\neq i}(x-x_j)}{\prod_{j\neq i}(x_i-x_j)}$$
 
 \begin{frame}{拉格朗日插值}
 如何求$\prod_{j\neq i}(x-x_j)$\\
-分治+FFT: $O(nlog^2n)$\\
+分治+FFT: $O(n^2log^2n)$\\
 \pause
 如果不需求多项式的系数，只是要求多项式在某点的值F(t)\\
 那只要求$\prod_{j\neq i}(t-x_j)$\\
 可以$O(n)$预处理前缀积和后缀积，然后就可以求出每个j的$\prod_{j\neq i}(t-x_j)$\\
+如果插值点的横坐标是等差数列的话，则可以$O(n)$计算出分母\\
 \end{frame}
 
 \begin{frame}{例题：如何优雅地求和}
@@ -119,7 +120,7 @@ $O(m^2)$卡卡常就能过了\\
 \onslide<1->鸡块：4的倍数个 & \onslide<3->$x^0+x^4+x^8+...=\frac{1}{1-x^4}$\\
 \onslide<1->包子：0个，1个，2个或3个 & \onslide<3->$x^0+x^1+x^2+x^3=\frac{1-x^4}{1-x}$\\
 \onslide<1->土豆：不超过一个 & \onslide<3->$x^0+x^1=\frac{1-x^2}{1-x}$\\
-\onslide<1->面包：3的倍数个 & \onslide<3->$x^0+x^3+x^6+...\frac{1}{1-x^3}$\\
+\onslide<1->面包：3的倍数个 & \onslide<3->$x^0+x^3+x^6+...=\frac{1}{1-x^3}$\\
 \end{tabular}\\
 \normalsize
 \onslide<1->
