@@ -113,21 +113,7 @@ layout: default
 
                 {% if site.gitment_username %}
                 <!-- gitment 评论框 start -->
-                <div id="container"></div>
-                <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-                <script>
-                var gitment = new Gitment({
-                  //id: '页面 ID', // 可选。默认为 location.href
-                  owner: '{{site.gitment_username}}',
-                  repo: 'sjj118.github.io',
-                  oauth: {
-                    client_id: '5099afc263addd98be13',
-                    client_secret: '79401012bcd210085b59e2d0985924a7f745369e',
-                  },
-                })
-                gitment.render('container')
-                </script>
+                <div id="gitment_comment"></div>
                 <!-- gitment 评论框 end -->
                 {% endif %}
                 
@@ -227,6 +213,25 @@ layout: default
 <!-- disqus 公共JS代码 end -->
 {% endif %}
 
+
+{% if site.gitment_username %}
+<!-- gitment 公共JS代码 start -->
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: '{{site.gitment_username}}',
+        repo: '{{site.gitment_repo}}',
+        oauth: {
+            client_id: '{{site.gitment_id}}',
+            client_secret: '{{site.gitment_secret}}',
+        },
+    })
+    gitment.render('gitment_comment')
+</script>
+<!-- gitment 公共JS代码 end -->
+{% endif %}
 
 {% if site.anchorjs %}
 <!-- async load function -->

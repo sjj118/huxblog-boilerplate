@@ -56,6 +56,9 @@ kramdown:
 
 # Gitment settings
 gitment_username: sjj118
+gitment_repo: sjj118.github.io
+gitment_id: 5099afc263addd98be13
+gitment_secret: 79401012bcd210085b59e2d0985924a7f745369e
 
 
 # Analytics settings
