@@ -222,9 +222,9 @@ layout: default
 
 {% if site.gitalk_username %}
 <!-- gitalk 公共JS代码 start -->
+<link rel="stylesheet" href="{{site.baseurl}}/gitalk/dist/gitalk.css">
+<script src="{{site.baseurl}}/gitalk/dist/gitalk.min.js"></script>
 <script>
-	import 'gitalk/dist/gitalk.css'
-	import Gitalk from 'gitalk'
     var gitalk = new Gitalk({
         clientID: '{{site.gitalk_id}}',
         clientSecret: '{{site.gitalk_secret}}',
