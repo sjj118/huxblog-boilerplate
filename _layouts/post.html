@@ -118,6 +118,12 @@ layout: default
                 {% endif %}
                 
 
+                {% if site.gitment_username %}
+                <!-- gitment 评论框 start -->
+                <div id="gitalk_comment"></div>
+                <!-- gitment 评论框 end -->
+                {% endif %}
+
             </div>
 
 			
@@ -211,6 +217,24 @@ layout: default
     })();
 </script>
 <!-- disqus 公共JS代码 end -->
+{% endif %}
+
+
+{% if site.gitalk_username %}
+<!-- gitalk 公共JS代码 start -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '{{site.gitalk_id}}',
+        clientSecret: '{{site.gitalk_secret}}',
+        repo: '{{site.gitalk_repo}}',
+        owner: '{{site.gitalk_username}}',
+        admin: ['{{site.gitalk_username}}'],
+    })
+    gitalk.render('gitalk_comment')
+</script>
+<!-- gitalk 公共JS代码 end -->
 {% endif %}
 
 
