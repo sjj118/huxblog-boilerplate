@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: "sjj118@sjj118.com"
 description: ""
 keyword: ""
-url: "http://blog.sjj118.com"              # your host, for absolute URL
-baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
+url: "http://blog.sjj118.com/jekyll-blog"              # your host, for absolute URL
+baseurl: "/jekyll-blog"         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
